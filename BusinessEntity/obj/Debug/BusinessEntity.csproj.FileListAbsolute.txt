@@ -1,0 +1,4 @@
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessEntity\bin\Debug\BusinessEntity.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessEntity\bin\Debug\BusinessEntity.pdb
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessEntity\obj\Debug\BusinessEntity.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessEntity\obj\Debug\BusinessEntity.pdb

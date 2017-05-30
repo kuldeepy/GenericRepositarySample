@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TorQAModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EFSalesRefCode" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SalesRefNumber" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="HomeCountryCode" Type="char" MaxLength="2" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="HomeAddress1" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="HomeAddress2" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="HomeAddress3" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="HomeCity" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="HomeProvince" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="HomePostalCode" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="HomePhone" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="MobilePhone" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="BirthDate" Type="datetime" />
+    <Property Name="Sex" Type="char" MaxLength="1" />
+    <Property Name="Email" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="CustomerNotes" Type="varchar" MaxLength="7000" Nullable="false" />
+    <Property Name="CustomerNotesExt" Type="varchar" MaxLength="7000" />
+    <Property Name="Reported" Type="bit" Nullable="false" />
+    <Property Name="InsertDate" Type="datetime" Nullable="false" />
+    <Property Name="InsertBy" Type="int" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+  </EntityType>
+  <EntityType Name="Insurance">
+    <Key>
+      <PropertyRef Name="InsuranceID" />
+    </Key>
+    <Property Name="InsuranceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CustomerID" Type="int" Nullable="false" />
+    <Property Name="InsuranceCompanyID" Type="int" />
+    <Property Name="ImportID" Type="int" />
+    <Property Name="SalesAgentCode" Type="char" MaxLength="10" Nullable="false" />
+    <Property Name="ProgramCode" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="ErikaPolicyCode" Type="char" MaxLength="14" Nullable="false" />
+    <Property Name="CurrencyCode" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="IsCAX" Type="bit" Nullable="false" />
+    <Property Name="DestinationCountryCode" Type="char" MaxLength="2" />
+    <Property Name="ErikaSubPolicyCodes" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Destination" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" />
+    <Property Name="ExpireDate" Type="datetime" />
+    <Property Name="PurchaseDate" Type="datetime" />
+    <Property Name="PricePaid" Type="money" />
+    <Property Name="SalesStatus" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="InsertDate" Type="datetime" Nullable="false" />
+    <Property Name="InsertBy" Type="int" Nullable="false" />
+    <Property Name="UpdateDate" Type="datetime" />
+    <Property Name="UpdateBy" Type="int" />
+    <Property Name="TransportModeCode" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Tokens">
+    <Key>
+      <PropertyRef Name="TokenId" />
+    </Key>
+    <Property Name="TokenId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="AuthToken" Type="nvarchar" MaxLength="250" Nullable="false" />
+    <Property Name="IssuedOn" Type="datetime" Nullable="false" />
+    <Property Name="ExpiresOn" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TorUser">
+    <Key>
+      <PropertyRef Name="TorUserID" />
+    </Key>
+    <Property Name="TorUserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="PasswordHash" Type="varchar" MaxLength="50" />
+    <Property Name="PasswordSalt" Type="varchar" MaxLength="50" />
+    <Property Name="Type" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Rights" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsDeleted" Type="bit" Nullable="false" />
+    <Property Name="StartPage" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DateFormat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="RecordsPerPageClRL" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RecordsPerPageCuRL" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="RecordSetsClaimSection" Type="int" Nullable="false" />
+    <Property Name="RecordSetsCustomerSection" Type="int" Nullable="false" />
+    <Property Name="RecordsSearchClaimSection" Type="int" Nullable="false" />
+    <Property Name="RecordsSearchCustomerSection" Type="int" Nullable="false" />
+    <Property Name="LoginName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="IPAddress" Type="varchar" MaxLength="100" />
+    <Property Name="AllowAllocationAccess" Type="bit" Nullable="false" />
+    <Property Name="FailedLoginAttempts" Type="int" Nullable="false" />
+    <Property Name="AllowClaimImportDelete" Type="bit" Nullable="false" />
+    <Property Name="AllowCustomerDelete" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Insurance_Customer">
+    <End Role="Customer" Type="Self.Customer" Multiplicity="1" />
+    <End Role="Insurance" Type="Self.Insurance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Insurance">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Tokens_TorUser">
+    <End Role="TorUser" Type="Self.TorUser" Multiplicity="1" />
+    <End Role="Tokens" Type="Self.Tokens" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TorUser">
+        <PropertyRef Name="TorUserID" />
+      </Principal>
+      <Dependent Role="Tokens">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="SearchCustomer_p" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="EfSalesRefId" Type="varchar" Mode="In" />
+    <Parameter Name="LastName" Type="varchar" Mode="In" />
+    <Parameter Name="FirstName" Type="varchar" Mode="In" />
+    <Parameter Name="StartYear" Type="varchar" Mode="In" />
+    <Parameter Name="StartMonth" Type="varchar" Mode="In" />
+    <Parameter Name="StartDay" Type="varchar" Mode="In" />
+    <Parameter Name="EndYear" Type="varchar" Mode="In" />
+    <Parameter Name="EndMonth" Type="varchar" Mode="In" />
+    <Parameter Name="EndDay" Type="varchar" Mode="In" />
+    <Parameter Name="DobYear" Type="varchar" Mode="In" />
+    <Parameter Name="DobMonth" Type="varchar" Mode="In" />
+    <Parameter Name="DobDay" Type="varchar" Mode="In" />
+    <Parameter Name="SalesCountry" Type="varchar" Mode="In" />
+    <Parameter Name="Program" Type="varchar" Mode="In" />
+    <Parameter Name="DestinationCountry" Type="varchar" Mode="In" />
+    <Parameter Name="Policy" Type="varchar" Mode="In" />
+    <Parameter Name="AetnaId" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="TorQAModelStoreContainer">
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Insurance" EntityType="Self.Insurance" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tokens" EntityType="Self.Tokens" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TorUser" EntityType="Self.TorUser" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Insurance_Customer" Association="Self.FK_Insurance_Customer">
+      <End Role="Customer" EntitySet="Customer" />
+      <End Role="Insurance" EntitySet="Insurance" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Tokens_TorUser" Association="Self.FK_Tokens_TorUser">
+      <End Role="TorUser" EntitySet="TorUser" />
+      <End Role="Tokens" EntitySet="Tokens" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

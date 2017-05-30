@@ -1,0 +1,16 @@
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessServices\bin\Debug\BusinessServices.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessServices\bin\Debug\BusinessServices.pdb
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessServices\bin\Debug\AutoMapper.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessServices\bin\Debug\BusinessEntities.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessServices\bin\Debug\DAL.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessServices\bin\Debug\EntityFramework.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessServices\bin\Debug\BusinessEntities.pdb
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessServices\bin\Debug\DAL.pdb
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessServices\bin\Debug\AutoMapper.xml
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessServices\bin\Debug\EntityFramework.xml
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessServices\obj\Debug\BusinessServices.csprojResolveAssemblyReference.cache
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessServices\obj\Debug\BusinessServices.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessServices\obj\Debug\BusinessServices.pdb
+C:\Users\kuldeep.yadav\Documents\Visual Studio 2015\Projects\TorServices\BusinessServices\bin\Debug\BusinessServices.dll.config
+C:\Users\kuldeep.yadav\Documents\Visual Studio 2015\Projects\TorServices\BusinessServices\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kuldeep.yadav\Documents\Visual Studio 2015\Projects\TorServices\BusinessServices\bin\Debug\EntityFramework.SqlServer.xml

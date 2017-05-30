@@ -1,0 +1,183 @@
+2017-04-18 11:28:12.1163|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/get/token
+Controller : TorServices.Controllers.AuthenticateController
+Action : Authenticate
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 11:28:22.4572|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: 85129c75-a795-48b2-a3e7-0b782337f62f
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 11:29:31.8698|ERROR|TorServices.Logging.NLogger|Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: 85129c75-a795-48b2-a3e7-0b782337f62f
+Controller :TorServices.Controllers.SearchController
+Action :Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass1
+Error: The wait operation timed out
+
+
+2017-04-18 11:41:53.0157|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: 85129c75-a795-48b2-a3e7-0b782337f62f
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 11:44:08.4674|ERROR|TorServices.Logging.NLogger|Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: 85129c75-a795-48b2-a3e7-0b782337f62f
+Controller :TorServices.Controllers.SearchController
+Action :Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass1
+Error: ExecuteReader requires an open and available Connection. The connection's current state is closed.
+
+
+2017-04-18 11:53:38.2058|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: 85129c75-a795-48b2-a3e7-0b782337f62f
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 11:56:01.6960|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: 85129c75-a795-48b2-a3e7-0b782337f62f
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 12:15:04.3780|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: 85129c75-a795-48b2-a3e7-0b782337f62f
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 12:17:11.9909|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: 85129c75-a795-48b2-a3e7-0b782337f62f
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 15:42:00.3773|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/get/token
+Controller : TorServices.Controllers.AuthenticateController
+Action : Authenticate
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 15:42:14.2417|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: cd57ce74-f7dd-4402-bb38-380fc613fa56
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 15:49:25.1281|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: cd57ce74-f7dd-4402-bb38-380fc613fa56
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 17:13:57.1923|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: cd57ce74-f7dd-4402-bb38-380fc613fa56
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 17:14:25.4488|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/get/token
+Controller : TorServices.Controllers.AuthenticateController
+Action : Authenticate
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 17:14:55.9670|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: ae84ff5c-68db-4f7f-a84a-74b432647e8c
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 17:59:11.5266|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/get/token
+Controller : TorServices.Controllers.AuthenticateController
+Action : Authenticate
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 17:59:27.5570|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: d8472bfb-abd8-4703-975d-32c02f998b44
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 18:01:35.7072|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: d8472bfb-abd8-4703-975d-32c02f998b44
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 18:18:38.6375|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: d8472bfb-abd8-4703-975d-32c02f998b44
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 18:19:38.4402|ERROR|TorServices.Logging.NLogger|Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: d8472bfb-abd8-4703-975d-32c02f998b44
+Controller :TorServices.Controllers.SearchController
+Action :Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass1
+Error: The data reader is incompatible with the specified 'TorQAModel.SearchCustomer_p_Result'. A member of the type, 'RowNumber', does not have a corresponding column in the data reader with the same name.
+
+
+2017-04-18 18:20:12.0179|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: d8472bfb-abd8-4703-975d-32c02f998b44
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 18:21:42.0929|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: d8472bfb-abd8-4703-975d-32c02f998b44
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-18 18:23:46.4051|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: d8472bfb-abd8-4703-975d-32c02f998b44
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+

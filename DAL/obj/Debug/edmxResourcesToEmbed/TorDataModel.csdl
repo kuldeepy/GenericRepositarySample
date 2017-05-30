@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TorQAModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TorUser">
+    <Key>
+      <PropertyRef Name="TorUserID" />
+    </Key>
+    <Property Name="TorUserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PasswordHash" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PasswordSalt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Rights" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="StartPage" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DateFormat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RecordsPerPageClRL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RecordsPerPageCuRL" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RecordSetsClaimSection" Type="Int32" Nullable="false" />
+    <Property Name="RecordSetsCustomerSection" Type="Int32" Nullable="false" />
+    <Property Name="RecordsSearchClaimSection" Type="Int32" Nullable="false" />
+    <Property Name="RecordsSearchCustomerSection" Type="Int32" Nullable="false" />
+    <Property Name="LoginName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IPAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AllowAllocationAccess" Type="Boolean" Nullable="false" />
+    <Property Name="FailedLoginAttempts" Type="Int32" Nullable="false" />
+    <Property Name="AllowClaimImportDelete" Type="Boolean" Nullable="false" />
+    <Property Name="AllowCustomerDelete" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Tokens" Relationship="TorQAModel.FK_Tokens_TorUser" FromRole="TorUser" ToRole="Token" />
+  </EntityType>
+  <EntityContainer Name="TorEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TorUsers" EntityType="Self.TorUser" />
+    <EntitySet Name="Tokens" EntityType="TorQAModel.Token" />
+    <AssociationSet Name="FK_Tokens_TorUser" Association="TorQAModel.FK_Tokens_TorUser">
+      <End Role="TorUser" EntitySet="TorUsers" />
+      <End Role="Token" EntitySet="Tokens" />
+    </AssociationSet>
+    <EntitySet Name="Customers" EntityType="TorQAModel.Customer" />
+    <EntitySet Name="Insurances" EntityType="TorQAModel.Insurance" />
+    <AssociationSet Name="FK_Insurance_Customer" Association="TorQAModel.FK_Insurance_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="Insurance" EntitySet="Insurances" />
+    </AssociationSet>
+    <FunctionImport Name="SearchCustomer_p" ReturnType="Collection(TorQAModel.SearchCustomer_p_Result)">
+      <Parameter Name="EfSalesRefId" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="StartYear" Mode="In" Type="String" />
+      <Parameter Name="StartMonth" Mode="In" Type="String" />
+      <Parameter Name="StartDay" Mode="In" Type="String" />
+      <Parameter Name="EndYear" Mode="In" Type="String" />
+      <Parameter Name="EndMonth" Mode="In" Type="String" />
+      <Parameter Name="EndDay" Mode="In" Type="String" />
+      <Parameter Name="DobYear" Mode="In" Type="String" />
+      <Parameter Name="DobMonth" Mode="In" Type="String" />
+      <Parameter Name="DobDay" Mode="In" Type="String" />
+      <Parameter Name="SalesCountry" Mode="In" Type="String" />
+      <Parameter Name="Program" Mode="In" Type="String" />
+      <Parameter Name="DestinationCountry" Mode="In" Type="String" />
+      <Parameter Name="Policy" Mode="In" Type="String" />
+      <Parameter Name="AetnaId" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Token">
+    <Key>
+      <PropertyRef Name="TokenId" />
+    </Key>
+    <Property Name="TokenId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="AuthToken" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="IssuedOn" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExpiresOn" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="TorUser" Relationship="TorQAModel.FK_Tokens_TorUser" FromRole="Token" ToRole="TorUser" />
+  </EntityType>
+  <Association Name="FK_Tokens_TorUser">
+    <End Type="TorQAModel.TorUser" Role="TorUser" Multiplicity="1" />
+    <End Type="TorQAModel.Token" Role="Token" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TorUser">
+        <PropertyRef Name="TorUserID" />
+      </Principal>
+      <Dependent Role="Token">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerID" />
+    </Key>
+    <Property Name="CustomerID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EFSalesRefCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SalesRefNumber" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HomeCountryCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="HomeAddress1" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="HomeAddress2" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="HomeAddress3" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="HomeCity" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="HomeProvince" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="HomePostalCode" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="HomePhone" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="MobilePhone" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="BirthDate" Type="DateTime" Precision="3" />
+    <Property Name="Sex" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerNotes" Type="String" Nullable="false" MaxLength="7000" FixedLength="false" Unicode="false" />
+    <Property Name="CustomerNotesExt" Type="String" MaxLength="7000" FixedLength="false" Unicode="false" />
+    <Property Name="Reported" Type="Boolean" Nullable="false" />
+    <Property Name="InsertDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="InsertBy" Type="Int32" Nullable="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="Int32" />
+    <NavigationProperty Name="Insurances" Relationship="TorQAModel.FK_Insurance_Customer" FromRole="Customer" ToRole="Insurance" />
+  </EntityType>
+  <EntityType Name="Insurance">
+    <Key>
+      <PropertyRef Name="InsuranceID" />
+    </Key>
+    <Property Name="InsuranceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CustomerID" Type="Int32" Nullable="false" />
+    <Property Name="InsuranceCompanyID" Type="Int32" />
+    <Property Name="ImportID" Type="Int32" />
+    <Property Name="SalesAgentCode" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ProgramCode" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="ErikaPolicyCode" Type="String" Nullable="false" MaxLength="14" FixedLength="true" Unicode="false" />
+    <Property Name="CurrencyCode" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="IsCAX" Type="Boolean" Nullable="false" />
+    <Property Name="DestinationCountryCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ErikaSubPolicyCodes" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Destination" Type="String" Nullable="false" MaxLength="60" FixedLength="false" Unicode="false" />
+    <Property Name="StartDate" Type="DateTime" Precision="3" />
+    <Property Name="ExpireDate" Type="DateTime" Precision="3" />
+    <Property Name="PurchaseDate" Type="DateTime" Precision="3" />
+    <Property Name="PricePaid" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="SalesStatus" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="InsertDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="InsertBy" Type="Int32" Nullable="false" />
+    <Property Name="UpdateDate" Type="DateTime" Precision="3" />
+    <Property Name="UpdateBy" Type="Int32" />
+    <Property Name="TransportModeCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Customer" Relationship="TorQAModel.FK_Insurance_Customer" FromRole="Insurance" ToRole="Customer" />
+  </EntityType>
+  <Association Name="FK_Insurance_Customer">
+    <End Type="TorQAModel.Customer" Role="Customer" Multiplicity="1" />
+    <End Type="TorQAModel.Insurance" Role="Insurance" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerID" />
+      </Principal>
+      <Dependent Role="Insurance">
+        <PropertyRef Name="CustomerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="SearchCustomer_p_Result">
+    <Property Type="Int32" Name="RowNumber" Nullable="true" />
+    <Property Type="Int32" Name="CustomerID" Nullable="true" />
+    <Property Type="String" Name="EFSalesRefCode" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="FirstName" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="LastName" Nullable="true" MaxLength="60" />
+    <Property Type="DateTime" Name="BirthDate" Nullable="true" Precision="23" />
+    <Property Type="Int32" Name="InsuranceId" Nullable="true" />
+    <Property Type="String" Name="ProgramCode" Nullable="true" MaxLength="8" />
+    <Property Type="String" Name="ErikaPolicyCode" Nullable="true" MaxLength="14" />
+    <Property Type="String" Name="ErikaSubPolicyCodes" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Destination" Nullable="true" MaxLength="60" />
+    <Property Type="String" Name="DestinationCountryCode" Nullable="true" MaxLength="2" />
+    <Property Type="DateTime" Name="StartDate" Nullable="true" Precision="23" />
+    <Property Type="DateTime" Name="ExpireDate" Nullable="true" Precision="23" />
+    <Property Type="String" Name="CountryCode" Nullable="true" MaxLength="2" />
+    <Property Type="String" Name="AetnaID" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="RelatedAetnaId" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

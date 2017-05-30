@@ -1,0 +1,10 @@
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\DAL\bin\Debug\DAL.dll.config
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\DAL\bin\Debug\DAL.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\DAL\bin\Debug\DAL.pdb
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\DAL\bin\Debug\EntityFramework.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\DAL\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\DAL\bin\Debug\EntityFramework.xml
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\DAL\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\DAL\obj\Debug\DAL.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\DAL\obj\Debug\DAL.pdb

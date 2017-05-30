@@ -1,0 +1,23 @@
+2017-04-20 10:55:07.9049|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: d826c0e2-2efd-479d-ad96-d17116f75018
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-20 10:55:15.2793|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/get/token
+Controller : TorServices.Controllers.AuthenticateController
+Action : Authenticate
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+
+2017-04-20 10:55:29.5184|INFO|TorServices.Logging.NLogger|JSON
+Method: POST
+URL: http://localhost:62423/api/tor-service/search
+Token: 35377981-9e9b-49da-a82f-697e00bb2430
+Controller : TorServices.Controllers.SearchController
+Action : Search
+Action Parameter : System.Web.Http.Tracing.ITraceWriterExtensions+<>c__DisplayClass7
+

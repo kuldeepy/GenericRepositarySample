@@ -1,0 +1,5 @@
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessEntity\bin\Debug\BusinessEntities.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessEntity\bin\Debug\BusinessEntities.pdb
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessEntity\obj\Debug\BusinessEntities.dll
+c:\users\kuldeep.yadav\documents\visual studio 2015\Projects\TorServices\BusinessEntity\obj\Debug\BusinessEntities.pdb
+C:\Users\kuldeep.yadav\Documents\Visual Studio 2015\Projects\TorServices\BusinessEntity\obj\Debug\BusinessEntities.csprojResolveAssemblyReference.cache
